@@ -29,13 +29,11 @@ SELECT
     b.Title,
     ib.IssueDate
 FROM IssuedBooks ib
-JOIN Students s 
-    ON ib.StudentID = s.StudentID
-JOIN Books b 
-    ON ib.BookID = b.BookID
+JOIN Students s ON ib.StudentID = s.StudentID
+JOIN Books b ON ib.BookID = b.BookID
 WHERE 
     ib.ReturnDate IS NULL
-    AND ib.IssueDate < CURRENT_DATE - INTERVAL '14 days';
+    AND ib.IssueDate < DATE('now', '-14 days');
 SELECT 
     b.Category,
     COUNT(*) AS TotalBorrows
