@@ -48,5 +48,5 @@ SET Status = 'Inactive'
 WHERE StudentID NOT IN (
     SELECT DISTINCT StudentID
     FROM IssuedBooks
-    WHERE IssueDate >= CURRENT_DATE - INTERVAL '3 years'
+    WHERE DATE('now', '-3 years')
 );
