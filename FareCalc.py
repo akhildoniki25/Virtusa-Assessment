@@ -9,24 +9,24 @@ def calculate_fare(km, vehicle_type, hour):
     if vehicle_type not in rates:
         return None
 
-    base_fare = km * rates[vehicle_type]
+    basefare = km * rates[vehicle_type]
     if 17 <= hour <= 20:
-        base_fare =base_fare * 1.5
-    return base_fare
+        basefare =basefare * 1.5
+    return basefare
 
 
 def main():
-    print( "CityCab Ride Estimate ")
+    print( "CityCab Ride estimate ")
 
     try:
-        km = float(input("Enter distance (in km): "))
-        vehicle_type = input("Enter vehicle type (Economy/Premium/SUV): ")
-        hour = int(input("Enter hour of day (0-23): "))
+        km = float(input("enter the  distance (km): "))
+        vehicle_type = input("enter vehicle type(in caps) (Economy/Premium/SUV): ")
+        hour = int(input("enter hour of day (0-23): "))
 
         fare = calculate_fare(km, vehicle_type, hour)
 
         if fare is None:
-            print("Service Not Available for selected vehicle type.")
+            print("Service is  Not available for selected vehicle type.")
         else:
             print("\n PRICE RECEIPT")
             print(f"Distance: {km} km")
