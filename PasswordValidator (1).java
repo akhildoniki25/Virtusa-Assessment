@@ -18,11 +18,11 @@ public class PasswordValidator {
             }
         }
         if (!hasUpperCase) {
-            System.out.println("Missing an uppercase letter");
+            System.out.println("Missing  uppercase letter");
         }
 
         if (!hasDigit) {
-            System.out.println("Missing a digit");
+            System.out.println("Missing A digit");
         }
         return hasUpperCase && hasDigit;
     }
@@ -32,14 +32,14 @@ public class PasswordValidator {
         Scanner scanner = new Scanner(System.in);
         String password;
         while (true) {
-            System.out.print("Enter your password: ");
+            System.out.print("Enter your password");
             password = scanner.nextLine();
 
             if (isValidPassword(password)) {
-                System.out.println("Password is valid!");
+                System.out.println("Password is valid");
                 break;
             } else {
-                System.out.println("Please try again.\n");
+                System.out.println("Please try again");
             }
         }
 
