@@ -11,4 +11,13 @@ concepts used:Functions()
               Conditional atatemets
               Exception handling
               String Formatting
-* safelog password validator a java project developed for creat a strong and secure password by validating them aganist security policies. 
+* safelog password validator a java project developed for creat a strong and secure password by validating them aganist security policies.
+  What it checks
+
+The password should:
+be at least 8 characters long
+have at least one uppercase letter
+have at least one lowercase letter
+have at least one number
+have at least one special character (like @, #, $, etc.)
+If any condition is not satisfied, the program tells what is missing and asks the user to try again.
