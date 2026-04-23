@@ -21,6 +21,7 @@ def main():
     try:
         km = float(input("enter the  distance (km): "))
         vehicle_type = input("enter vehicle type(in caps) (Economy/Premium/SUV): ")
+        vehicle_type = vehicle_type.upper() 
         hour = int(input("enter hour of day (0-23): "))
 
         fare = calculate_fare(km, vehicle_type, hour)
