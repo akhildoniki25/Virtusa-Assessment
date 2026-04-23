@@ -72,5 +72,5 @@ SET Status = 'Inactive'
 WHERE StudentID NOT IN (
     SELECT DISTINCT StudentID
     FROM IssuedBooks
-    WHERE DATE('now', '-3 years')
+    WHERE IssueDate>= DATE('now', '-3 years')
 );
