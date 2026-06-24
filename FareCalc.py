@@ -2,8 +2,8 @@
 
 def calculate_fare(km, vehicle_type, hour):
     rates = {
-        'Economy': 10,
-        'Premium': 18,
+        'ECONOMY': 10,
+        'PREMIUM': 18,
         'SUV': 25
     }
     if vehicle_type not in rates:
